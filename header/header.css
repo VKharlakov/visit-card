@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: azure;
+    padding: 20px;
+}
+
+/* .header__logo {
+} */
+
+.header__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__link {
+    display: inline-block;
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: .2s;
+}
+
+.header__link:hover {
+    text-decoration-color: black;
+}

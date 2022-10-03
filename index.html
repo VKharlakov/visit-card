@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="decription" content="">
+        <title></title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body class="page">
+        <header class="header">
+            <img class="header__logo" src="#" alt="Logo">
+            <nav class="header__navigation">
+                <a class="header__link" href="#">Обо мне</a>
+                <a class="header__link" href="#">Мои проекты</a>
+                <a class="header__link" href="#">Контакты</a>
+            </nav>
+        </header>
+        <main class="content">
+            <div class="intro">
+                <h1 class="intro__greeting">Привет,
+                    <span class="intro__span" id="greeting"></span>
+                </h1>
+                <a class="intro__link" href="#bio">Start</a>
+            </div>
+            <div class="bio" id="bio"></div>
+            <div class="login">
+                <form class="form" novalidate>
+                    <label class="form__label" for="name">Введите имя</label>
+                    <input class="form__input" id="inputName" type="text" name="name" placeholder="Имя" required minlength="5" maxlength="30" value="Reynara">
+                    <p class="form__hint" id="inputName-hint"></p>
+                    
+                    <label class="form__label" for="surname">Введите фамилию</label>
+                    <input class="form__input" id="inputSurname" type="text" name="surname" placeholder="Фамилия" required minlength="5" value="Targarien">
+                    <p class="form__hint" id="inputSurname-hint"></p>
+                    
+                    <button class="form__button" type="submit">Submit</button>
+                </form>
+            </div>
+        </main>
+        <script src="validation.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
