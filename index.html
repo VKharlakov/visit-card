@@ -8,7 +8,7 @@
     </head>
     <body class="page">
         <header class="header">
-            <img class="header__logo" src="#" alt="Logo">
+            <img class="header__logo" src="#" alt="Kharvit logo">
             <nav class="header__navigation">
                 <a class="header__link" href="#">Обо мне</a>
                 <a class="header__link" href="#">Мои проекты</a>
@@ -16,13 +16,36 @@
             </nav>
         </header>
         <main class="content">
-            <div class="intro">
+            <div class="intro" id="intro">
                 <h1 class="intro__greeting">Привет,
                     <span class="intro__span" id="greeting"></span>
                 </h1>
                 <a class="intro__link" href="#bio">Start</a>
             </div>
-            <div class="bio" id="bio"></div>
+            <div class="bio" id="bio">
+                <ul class="bio__elements">
+                    <li class="bio__item">
+                        <img class="bio__item-icon" src="./images/aboutme-icon.svg" alt="icon">
+                        <p class="bio__item-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias temporibus itaque recusandae, iste quia!</p>
+                    </li>
+                    <li class="bio__item">
+                        <img class="bio__item-icon" src="./images/education-icon.svg" alt="icon">
+                        <p class="bio__item-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </li>
+                    <li class="bio__item">
+                        <img class="bio__item-icon" src="./images/job-icon.svg" alt="icon">
+                        <p class="bio__item-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut.</p>
+                    </li>
+                    <li class="bio__item">
+                        <img class="bio__item-icon" src="./images/certificate-icon.svg" alt="icon">
+                        <p class="bio__item-text">Lorem ipsum dolor sit amet.</p>
+                    </li>
+                    <li class="bio__item">
+                        <img class="bio__item-icon" src="./images/hobbies-icon.svg" alt="icon">
+                        <p class="bio__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio.</p>
+                    </li>
+                </ul>
+            </div>
             <div class="login">
                 <form class="form" novalidate>
                     <label class="form__label" for="name">Введите имя</label>

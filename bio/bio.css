@@ -1,4 +1,67 @@
 .bio {
+    display: flex;
+    justify-content: center;
     height: 100vh;
-    background-color: aquamarine;
+    background-color: white;
+}
+
+.bio__elements {
+    margin: 30px;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    grid-template-rows: auto;
+}
+
+.bio__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid steelblue;
+    transition: 1s;
+    padding: 10px;
+}
+
+.bio__item-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.bio__item-text {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom: -10px;
+
+    animation-name: showText;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    animation-play-state: paused; 
+}
+
+.bio__item:hover {
+    cursor: pointer;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.bio__item:hover .bio__item-text {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes showText {
+    0% {
+        bottom: 50px;
+        visibility: hidden;
+        opacity: 0; 
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+        bottom: -10px;
+    }
 }

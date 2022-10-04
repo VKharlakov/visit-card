@@ -10,7 +10,7 @@
     width: max-content;
     line-height: 100%;
     font-size: 50px;
-    border: 1px solid white;
+    font-weight: 900;
     margin: 0;
     padding: 0;
 }
@@ -19,10 +19,12 @@
     margin: 0;
     padding: 0;
     line-height: 100%;
-    font-size: 75px;
+    font-size: 70px;
+    font-weight: 400;
 }
 
 .intro__link {
+    font-weight: 300;
     width: min-content;
     color: aliceblue;
     font-size: 50px;
