@@ -1,18 +1,20 @@
 .bio {
     display: flex;
     justify-content: center;
-    height: 100vh;
     background-color: white;
 }
 
 .bio__elements {
+    width: 100%;
+    height: max-content;
     margin: 30px;
     gap: 20px;
     padding: 0;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
-    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px,250px));
+    grid-auto-rows: 350px;
+    justify-content: center;
 }
 
 .bio__item {
@@ -21,25 +23,39 @@
     flex-direction: column;
     justify-content: center;
     border: 3px solid steelblue;
-    transition: 1s;
+    transition: .5s;
     padding: 10px;
+    position: relative;
 }
 
 .bio__item-icon {
     width: 50px;
     height: 50px;
+    
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: 1s;
 }
 
 .bio__item-text {
-    margin: 0;
+    visibility: hidden;
+    opacity: 0;
+    width: 90%;
+    height: max-content;
     padding: 0;
-    position: relative;
-    bottom: -10px;
-
-    animation-name: showText;
-    animation-duration: 1s;
-    animation-fill-mode: backwards;
-    animation-play-state: paused; 
+    text-align: center;
+    transition: 1s;
+    
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 
 .bio__item:hover {
@@ -47,21 +63,33 @@
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-.bio__item:hover .bio__item-text {
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-play-state: running;
+.bio__item-clickIcon {
+    visibility: visible;
+    opacity: 1;
+    height: 50px;
+    width: 32px;
+    border-radius: 15px;
+    background-image: url(../images/click-icon.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .5s;
+
+    position: absolute;
+    bottom: 25px;
+    right: 0;
+    left: 0;
+    margin: auto;
 }
 
-@keyframes showText {
-    0% {
-        bottom: 50px;
-        visibility: hidden;
-        opacity: 0; 
-    }
-    100% {
-        visibility: visible;
-        opacity: 1;
-        bottom: -10px;
-    }
-}
+/* .bio__item-clickIcon::before {
+    content: 'Click on me!';
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;
+
+    position: absolute;
+    left: -20px;
+    bottom: -20px;
+} */
