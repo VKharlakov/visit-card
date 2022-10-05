@@ -81,15 +81,3 @@
     left: 0;
     margin: auto;
 }
-
-/* .bio__item-clickIcon::before {
-    content: 'Click on me!';
-    font-weight: 700;
-    font-size: 12px;
-    text-align: center;
-    white-space: nowrap;
-
-    position: absolute;
-    left: -20px;
-    bottom: -20px;
-} */

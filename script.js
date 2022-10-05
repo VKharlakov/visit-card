@@ -4,22 +4,23 @@ const formContainer = document.querySelector('.login')
 const greetMsg = document.querySelector('#greeting')
 const infoCardList = Array.from(document.querySelectorAll('.bio__item'))
 
+//Повешены слушатели на инфо-карты с функцией анимации информации
 infoCardList.forEach(function(cardElement) {
     cardElement.addEventListener('click', function(event) {
         const cardText = cardElement.querySelector('.bio__item-text')
         const cardIcon = cardElement.querySelector('.bio__item-icon')
         const cardClickIcon = cardElement.querySelector('.bio__item-clickIcon')
 
-        cardIcon.style.bottom = '80%'
-        cardText.style.visibility = 'visible'
-        cardText.style.opacity = '1'
-        cardClickIcon.style.opacity = '0'
-        cardClickIcon.style.visibility = 'hidden'
+        cardIcon.style.bottom = '80%' //сдвигает иконку инфо-карты наверх
+        cardText.style.visibility = 'visible' //делает текст видимым
+        cardText.style.opacity = '1' //плавно прорисовывает текст
+        cardClickIcon.style.opacity = '0' //плавно убирает кнопку "клик"
+        cardClickIcon.style.visibility = 'hidden' //делает кнопку "клик" невидимой
     })
 })
 
 
-
+//Объявлена функция приветствия по введенным данным
 function greetUser() {
     greetMsg.textContent = `${document.querySelector('#inputName').value}  ${document.querySelector('#inputSurname').value}`
 }
