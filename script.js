@@ -6,18 +6,29 @@ const infoCardList = Array.from(document.querySelectorAll('.bio__item'))
 
 //Повешены слушатели на инфо-карты с функцией анимации информации
 infoCardList.forEach(function(cardElement) {
-    cardElement.addEventListener('click', function(event) {
-        const cardText = cardElement.querySelector('.bio__item-text')
-        const cardIcon = cardElement.querySelector('.bio__item-icon')
-        const cardClickIcon = cardElement.querySelector('.bio__item-clickIcon')
-
+    const cardText = cardElement.querySelector('.bio__item-text')
+    const cardIcon = cardElement.querySelector('.bio__item-icon')
+    const cardClickIcon = cardElement.querySelector('.bio__item-clickIcon')
+    
+    cardElement.addEventListener('click', function() {
         cardIcon.style.bottom = '80%' //сдвигает иконку инфо-карты наверх
         cardText.style.visibility = 'visible' //делает текст видимым
         cardText.style.opacity = '1' //плавно прорисовывает текст
         cardClickIcon.style.opacity = '0' //плавно убирает кнопку "клик"
         cardClickIcon.style.visibility = 'hidden' //делает кнопку "клик" невидимой
     })
+
+    //Слушатель на двойной клик по карточке на ее переворот (временно)
+    cardElement.addEventListener('dblclick', function() {
+        cardElement.style.transform = 'rotateY(.5turn)'
+    })
 })
+
+// function showPhrase(cardElement, cardClickIcon) {
+//     if (cardClickIcon.style.visibility = 'hidden') {
+//         cardElement.style.transform = 'rotateY(.5turn)'
+//     }
+// }
 
 
 //Объявлена функция приветствия по введенным данным
