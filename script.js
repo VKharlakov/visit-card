@@ -16,16 +16,22 @@ infoCardList.forEach(function(cardElement) {
         cardText.style.opacity = '1' //плавно прорисовывает текст
         cardClickIcon.style.opacity = '0' //плавно убирает кнопку "клик"
         cardClickIcon.style.visibility = 'hidden' //делает кнопку "клик" невидимой
+
+        // showPhrase(cardElement, cardClickIcon)
     })
 
     //Слушатель на двойной клик по карточке на ее переворот (временно)
     cardElement.addEventListener('dblclick', function() {
-        cardElement.style.transform = 'rotateY(.5turn)'
+        if (!cardElement.style.transform) {
+            cardElement.style.transform = 'rotateY(.5turn)'
+        } else {
+            cardElement.style.transform = ''
+        }
     })
 })
 
 // function showPhrase(cardElement, cardClickIcon) {
-//     if (cardClickIcon.style.visibility = 'hidden') {
+//     if (cardClickIcon.style.visibility === 'hidden') {
 //         cardElement.style.transform = 'rotateY(.5turn)'
 //     }
 // }

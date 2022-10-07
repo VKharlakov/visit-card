@@ -127,3 +127,34 @@
     left: 0;
     margin: auto;
 }
+
+.bio__link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bio__link {
+    text-decoration: none;
+    color: black;
+    font-size: 42px;
+
+    position: relative;
+}
+
+.bio__link::after {
+    content: '\2193';
+    text-align: center;
+   
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 100%;
+}
+
+@media screen and (min-width: 1390px) {
+    .bio__link-container {
+        grid-column-end: span 5;
+    }
+}
