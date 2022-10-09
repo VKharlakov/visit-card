@@ -6,13 +6,12 @@
 
 .bio__elements {
     width: 100%;
-    height: max-content;
     margin: 30px;
     gap: 20px;
     padding: 0;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,250px));
+    grid-template-columns: repeat(auto-fit, 250px);
     grid-auto-rows: 350px;
     justify-content: center;
 }
@@ -33,7 +32,6 @@
 .bio__item:hover {
     cursor: pointer;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    /* transform: rotateY(.5turn); */
 }
 
 .bio__item-front,
@@ -66,15 +64,15 @@
     text-transform: uppercase;
 }
 
-.bio__item:nth-of-type(4) .bio__item-letter {
+.bio__item-letter_type_lowercase {
     text-transform: lowercase;
     font-size: 72px;
 }
 
-.bio__item:last-of-type .bio__item-letter:last-of-type {
+.bio__item-letter_type_overflow {
     font-size: 72px;
     font-style: italic;
-    margin-left: 100%;
+    /* margin-left: 100%; */
 }
 
 .bio__item-icon {
@@ -153,8 +151,8 @@
     top: 100%;
 }
 
-@media screen and (min-width: 1390px) {
+/* @media screen and (min-width: 1390px) {
     .bio__link-container {
         grid-column-end: span 5;
     }
-}
+} */
